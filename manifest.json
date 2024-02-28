@@ -4,7 +4,7 @@
 		"name": "칭호 애드온",
 		"description": "by Lemon7679 ( kakao : open.kakao.com/me/lemon7679 )",
 		"uuid": "2e0a4013-48ad-47d1-be04-304e6a33e978",
-		"version": [ 1, 0, 0 ],
+		"version": [ 1, 1, 0 ],
 		"min_engine_version": [ 1, 20, 0 ]
 	},
 	"modules": [
