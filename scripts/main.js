@@ -15,7 +15,6 @@ world.afterEvents.itemUse.subscribe(({ itemStack, source }) => {
                     return;
                 }
                 ;
-                console.warn(String(t.formValues).length < 11);
                 if (String(t.formValues).length < 11 && /\s/.test(String(t.formValues))) {
                     source.sendMessage(`§c§l10글자 이하의 단어와 띄어쓰기를 포함하지 않는 단어만 사용 가능 합니다.`);
                     return;
