@@ -46,5 +46,5 @@ world.afterEvents.itemUse.subscribe(({ itemStack, source }) => {
 world.beforeEvents.chatSend.subscribe(e => {
     const { sender, message } = e;
     e.cancel = true;
-    world.sendMessage(`[ §r${readData(sender.id) ? readData(sender.id) : "칭호 없음"} §r] ${sender.name} §8>§r ${message}`);
+    world.sendMessage(`[ §r${readData(sender.id) ?? "칭호 없음"} §r] ${sender.name} §8>§r ${message}`);
 });
