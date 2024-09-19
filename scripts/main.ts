@@ -5,7 +5,11 @@ import { readData, saveData } from "./db";
 world.afterEvents.itemUse.subscribe(({ itemStack, source }) => {
     if (itemStack.typeId == "addon:custom_title") {
         system.run(() => {
-            new ModalFormData().title(`§l§8<< 자유 칭호 쿠폰 >>`).textField(`§c§l10글자 이하의 단어와 띄어쓰기를 포함하지 않는 단어만 사용 가능 합니다.§r§l\n\n\n\n원하는 칭호를 입력해 주세요.`, `여기에 입력해 주세요.`).show(source).then(t => {
+            new ModalFormData().title(`§l§8<< 자유 칭호 쿠폰 >>`)
+                .textField(`§c§l10글자 이하의 단어와 띄어쓰기를 포함하지 않는 단어만 사용 가능 합니다.§r§l\n\n\n\n원하는 칭호를 입력해 주세요.`, `여기에 입력해 주세요.`)
+                .submitButton("칭호 적용")
+                .show(source)
+                .then(t => {
                 if (t.canceled) {
                     source.sendMessage(`§l자유 칭호 쿠폰을 사용을 취소하였습니다.`);
                     return;
